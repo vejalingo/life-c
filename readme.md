@@ -7,7 +7,7 @@
 - [Docker](https://www.docker.com/)
 - [MongoDbCommunityServer](https://www.mongodb.com/download-center/community)
 
-## ▶️arrow_forward: Setup & run
+## ▶️ Setup & run
 
 - `git clone repo`
 
