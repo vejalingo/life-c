@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  client:
+    build: ./client
+    expose: [3000]
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client/src:/app/lifeC-client/src
+      - ./client/public:/app/lifeC-client/public
+    links:
+      - server
+    command: yarn start
+
+  server:
+    build: ./server
+    expose:
+      - 9000
+    ports:
+      - "9000:9000"
+    depends_on:
+      - db
+    volumes:
+      - ./server/src:/app/lifeC-server/src
+    command: yarn dev
+
+  db:
+    image: mongo
+    restart: always
+    container_name: mongodb
+    volumes:
+      - ./data-node:/data/db
+    ports:
+      - "27017:27017"
+    command: mongod --noauth
