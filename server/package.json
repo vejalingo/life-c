@@ -2,8 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "scripts": {
-    "dev": "nodemon ./src/index.js",
-    "start": "concurrently \"nodemon ./src/index.js\" \"node ./src/seeder.js\""
+    "dev": "concurrently \"nodemon ./src/index.js\" \"node ./src/seeder.js\""
   },
   "author": "veli sithole",
   "license": "ISC",

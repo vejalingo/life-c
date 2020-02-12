@@ -26,7 +26,8 @@
     "source-map-explorer": "^2.1.0",
     "stylelint": "^10.1.0",
     "stylelint-scss": "^3.10.0",
-    "umi-request": "^1.2.5"
+    "umi-request": "^1.2.5",
+    "concurrently": "^5.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -47,6 +48,7 @@
     "prettier": "^1.18.2"
   },
   "scripts": {
+    "dev": "concurrently \"yarn start\" \"nodemon ../server/src/index.js\" \"node ../server/src/seeder.js\"",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",

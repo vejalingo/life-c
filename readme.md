@@ -13,8 +13,8 @@
 
 ### Without Docker
 
-- `cd server && yarn && yarn start`
-- `on a separate session - cd client && yarn && yarn start`
+- be sure to `yarn install` on the server and client dir
+- `cd client && yarn dev`
 
 ### With Docker
 
